@@ -1,0 +1,21 @@
+{
+  "name": "@sagemath/python",
+  "version": "1.0.0",
+  "description": "WebAssembly build of Python via emscripten that can be used via Node.js",
+  "files": ["dist/*", "README.md", "src/*", "*.sh", "package.json"],
+  "scripts": {
+    "build": "./build.sh",
+    "clean": "rm -rf build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sagemathinc/wasm-python.git"
+  },
+  "keywords": ["python", "wasm", "emscripten"],
+  "author": "William Stein",
+  "license": "PSF",
+  "bugs": {
+    "url": "https://github.com/sagemathinc/wasm-python/issues"
+  },
+  "homepage": "https://github.com/sagemathinc/wasm-python#readme"
+}
