@@ -77,8 +77,8 @@ emcc -o python.js Programs/python.o libpython3.9.a -ldl  -lm --lz4 \
 mkdir -p $DIST
 cp python.js python.data python.wasm $DIST
 
-# Now we can do
-#  node ./python -c 'print("hello world", 2+3)'
+# Now you can do
+#  cd dist; node ./python.js -c 'print("hello world", 2+3)'
 # and get
 #  hello world 5
 # However, just "node ./python" doesn't work, since it terminates instead of waiting for input.
