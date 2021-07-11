@@ -24,7 +24,7 @@ hello world 5
 
 ## Build from source
 
-This will download and build Python  from source, and copy the results into `dist/` , assuming you have [installed the emscripten toolchain](https://emscripten.org/docs/getting_started/downloads.html):
+This will download and build Python  from source, and copy the resulting WebAssembly build into `dist/` , assuming you have [installed the emscripten toolchain](https://emscripten.org/docs/getting_started/downloads.html).
 
 ```sh
 $ ./build.sh

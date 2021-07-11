@@ -1,11 +1,27 @@
 #!/usr/bin/env bash
 set -ev
+# We build both *native* Python and the WASM version.  Having the native vesion
+# is required for cross compilation.
+
 cd $BUILD
 
 # Download the Python source code from python.org and extract it:
 curl https://www.python.org/ftp/python/$PYTHON_VERSION/Python-$PYTHON_VERSION.tar.xz -o Python-$PYTHON_VERSION.tar.xz
 tar xvf Python-$PYTHON_VERSION.tar.xz
-cd Python-$PYTHON_VERSION
+mv Python-$PYTHON_VERSION Python-$PYTHON_VERSION.native
+tar xvf Python-$PYTHON_VERSION.tar.xz
+rm Python-$PYTHON_VERSION.tar.xz
+
+# Build native version
+cd Python-$PYTHON_VERSION.native
+time ./configure --prefix=$PREFIX_NATIVE --enable-optimizations
+time make -j10
+make install
+# Set the PATH to start with our native install, so that cross compile below works.
+export PATH=$PREFIX_NATIVE/bin:$PATH
+
+# Now cross compile
+cd $BUILD/Python-$PYTHON_VERSION
 
 # Apply all the patches to the code to make it emscripten friendly.
 # These come from pyodide.  They add a WASM cross compilation target

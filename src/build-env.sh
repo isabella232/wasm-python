@@ -7,3 +7,4 @@ export BUILD=`pwd`/build
 export SRC=`pwd`/src
 export DIST=`pwd`/dist
 export PREFIX=$BUILD/local
+export PREFIX_NATIVE=$BUILD/local-native

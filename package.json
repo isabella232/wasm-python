@@ -5,7 +5,7 @@
   "files": ["dist/*", "README.md", "src/*", "*.sh", "package.json"],
   "scripts": {
     "build": "./build.sh",
-    "clean": "rm -rf build"
+    "clean": "rm -rf build dist"
   },
   "repository": {
     "type": "git",
