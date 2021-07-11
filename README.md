@@ -5,7 +5,10 @@ WebAssembly build of Python via emscripten that can
 be used via Node.js to run a line of code from the
 command line.
 
-**Motivation**: Pyodide [doesn't support using their build from node.js](https://github.com/pyodide/pyodide/issues/14).  This is part of a bigger project to bring the capabilities of mathematical software to the Javascript ecosystem (browser, nodejs/deno servers, edge computing like cloudflare), and use the Javascript runtime as a common place to tie them all together.  Thus our needs are different from Pyodide.
+**Motivation**: 
+
+- Pyodide [doesn't support using their build from node.js](https://github.com/pyodide/pyodide/issues/14).  
+- This package is part of a [bigger](https://www.npmjs.com/package/@sagemath) [project](https://github.com/sagemathinc/?q=wasm) to bring the capabilities of mathematical software to the Javascript ecosystem (browser, nodejs/deno servers, edge computing like cloudflare), and use the Javascript runtime as a common place to tie them all together.  Thus our needs are different from Pyodide.
 
 ## Quickstart
 
