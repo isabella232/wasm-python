@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 set -ev
 
-. ./src/build-env.sh
+. ./src/build/build-env.sh
 
 rm -rf $BUILD
 mkdir $BUILD
 
-./src/build-python.sh
+./src/build/build-python.sh

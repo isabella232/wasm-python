@@ -26,11 +26,11 @@ cd $BUILD/Python-$PYTHON_VERSION
 # Apply all the patches to the code to make it emscripten friendly.
 # These come from pyodide.  They add a WASM cross compilation target
 # to the config scripts (shouldn't that get upstreamed to Python?).
-cat $SRC/python-patches/*.patch | patch -p1
+cat $SRC/build/python-patches/*.patch | patch -p1
 
 # Also copy the config.site, which answers some questions needed for
 # cross compiling, without which ./configure won't work.
-cp $SRC/config.site .
+cp $SRC/build/config.site .
 
 # Do the cross-compile ./configure.  Here's an explanation of each
 # of the options we use:
